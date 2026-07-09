@@ -37,6 +37,20 @@ export default function Home({ services, reviews, blogPosts, onNavigate, doctorP
             
             {/* Left Column: Text Content */}
             <div className="lg:col-span-7 space-y-8 text-left">
+              
+              {/* Doctor's Photo (Mobile Only: Visible below lg) */}
+              <div className="block lg:hidden">
+                <div className="mx-auto max-w-sm rounded-3xl overflow-hidden border border-slate-100 shadow-md bg-white p-2">
+                  <img
+                    src={doctorPhotoUrl || 'https://lh3.googleusercontent.com/d/1c26KmvrkLJPv9cmNxHR12GTcsVk_Ewj-=w1000'}
+                    alt="Dr. Vikramaditya Sabharwal"
+                    className="w-full h-auto rounded-2xl"
+                    referrerPolicy="no-referrer"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+
               <div className="space-y-3.5 flex flex-col items-start">
                 {/* Small Credential Strip */}
                 <div className="flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-teal-600/90">
@@ -94,17 +108,16 @@ export default function Home({ services, reviews, blogPosts, onNavigate, doctorP
             {/* Right Column: Visual Accent */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-sm lg:max-w-none">
-                {doctorPhotoUrl && (
-                  <div className="mb-6 rounded-3xl overflow-hidden border border-slate-100 shadow-md bg-white p-2">
-                    <img
-                      src={doctorPhotoUrl}
-                      alt="Dr. Vikramaditya Sabharwal"
-                      className="w-full h-auto rounded-2xl"
-                      referrerPolicy="no-referrer"
-                      loading="eager"
-                    />
-                  </div>
-                )}
+                {/* Doctor's Photo (Desktop Only: Visible on lg and up) */}
+                <div className="hidden lg:block mb-6 rounded-3xl overflow-hidden border border-slate-100 shadow-md bg-white p-2">
+                  <img
+                    src={doctorPhotoUrl || 'https://lh3.googleusercontent.com/d/1c26KmvrkLJPv9cmNxHR12GTcsVk_Ewj-=w1000'}
+                    alt="Dr. Vikramaditya Sabharwal"
+                    className="w-full h-auto rounded-2xl"
+                    referrerPolicy="no-referrer"
+                    loading="eager"
+                  />
+                </div>
                 {/* Elegant Minimal Card representing Dr. Sabharwal's Clinic */}
                 <div className="bg-white border border-slate-100 rounded-3xl p-8 shadow-xl relative overflow-hidden text-left">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 rounded-full blur-2xl -z-10"></div>

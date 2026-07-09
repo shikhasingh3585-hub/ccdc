@@ -23,7 +23,7 @@ export default function App() {
   const [galleryItems, setGalleryItems] = useState<GalleryItem[]>(GALLERY);
   const [cmsLoading, setCmsLoading] = useState<boolean>(true);
   const [isUsingSheetReviews, setIsUsingSheetReviews] = useState<boolean>(false);
-  const [doctorPhotoUrl, setDoctorPhotoUrl] = useState<string>('');
+  const [doctorPhotoUrl, setDoctorPhotoUrl] = useState<string>('https://lh3.googleusercontent.com/d/1c26KmvrkLJPv9cmNxHR12GTcsVk_Ewj-=w1000');
 
   // 1. HTML5 History pushState SPA Routing
   useEffect(() => {
