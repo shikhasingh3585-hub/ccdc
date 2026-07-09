@@ -1,0 +1,6 @@
+{
+  "name": "Centre For Complete Dental Care",
+  "description": "Official website of Centre For Complete Dental Care (CCDC) led by Dr. Vikramaditya Sabharwal in Chandigarh, India, featuring Google Sheets CMS integration and working appointment booking forms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
